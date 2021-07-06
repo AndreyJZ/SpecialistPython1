@@ -4,7 +4,7 @@
 
 number = int(input())
 
-if number % 5 == 0:
+if number % 10 == 5:
     print("YES")
 else:
     print("NO")
