@@ -3,9 +3,15 @@
 # выровненного по правой стороне - слева короткие слова дополняем символами пробела
 
 # Исходные данные:
-fruits = ["яблоко", "банан", "киви", "арбуз"]
+fruits = ["яблоко", "банан", "киви"]
+el_max = max(fruits)
 
-# TODO: your code here
+for i, el in enumerate(fruits, 1):
+
+    if el == el_max:
+        print(i, '. ', el, sep='')
+    else:
+        print(i, '. ', ' '*(len(el_max)-len(el)) + el, sep='')
 
 # Пример вывода:
 # 1. яблоко
