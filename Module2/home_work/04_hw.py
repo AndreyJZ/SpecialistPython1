@@ -14,3 +14,13 @@
 #    #
 #    #
 ######
+
+side = int(input('a: '))
+count = 0
+
+while count != side:
+    if count == 0 or count == side - 1:
+        print('#'*side)
+    else:
+        print('#', ' '*(side-2), '#', sep='')
+    count += 1
