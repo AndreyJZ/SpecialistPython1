@@ -6,3 +6,17 @@
 # Формат выходных данных:
 # Выведите, во сколько раз отрезок AB больше, чем отрезок CD. Ответ введите с точностью до 6-ти знаков после запятой.
 
+a = int(input('Введите a: '))
+b = int(input('Введите b: '))
+c = int(input('Введите c: '))
+d = int(input('Введите d: '))
+
+def interval(x1, x2):
+    return abs(x1 - x2)
+
+if interval(a, b) >= interval(c, d) and interval(c, d) != 0:
+    print(f'Отрезок AB больше, чем отрезок CD в: {float(interval(a, b)/interval(c, d)):.6} раз(а)')
+elif interval(a, b) <= interval(c, d) and interval(a, b) != 0:
+    print(f'Отрезок AB меньше, чем отрезок CD в: {float(interval(c, d)/interval(a, b)):.6} раз(а)')
+elif interval(a, b) == 0 or interval(c, d) == 0:
+    print('Один из отрезков равен нулю.')
